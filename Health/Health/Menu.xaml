@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage  xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Health.Menu"
+             BackgroundColor="Red"
+             Title=" ">
+    <ScrollView>
+
+
+
+        <VerticalStackLayout BackgroundColor="Red">
+            <Label 
+            Text="Menu"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            TextColor="White"
+            FontSize="40"
+            Margin="0, 15, 0, 25"/>
+
+            <VerticalStackLayout BackgroundColor="Red" x:Name="Calculos" IsVisible="True" Margin="0, 0, 0, 20">
+
+                <Border Stroke="White" BackgroundColor="White">
+                    <Grid BackgroundColor="White">
+                        <Button Clicked="CalculosButton" TextColor="Black" Text="Cálculos" FontSize="22" HorizontalOptions="FillAndExpand" BackgroundColor="White" VerticalOptions="Center" />
+                        <Image Source="calculadora.png" WidthRequest="20" HeightRequest="20" HorizontalOptions="Start" Margin="15, 0, 0, 0"/>
+                    </Grid>
+                </Border>
+
+                <VerticalStackLayout IsVisible="False" x:Name="CalculoItems">
+
+                    <Border BackgroundColor="White" Stroke="LightGray">
+                        <Grid>
+                            <Button Clicked="IMC" TextColor="Black" Text="IMC" FontSize="15" HorizontalOptions="FillAndExpand" BackgroundColor="White" VerticalOptions="Center" />
+                        </Grid>
+                    </Border>
+
+                    <Border BackgroundColor="White" Stroke="LightGray">
+                        <Grid>
+                            <Button Clicked="TMB" TextColor="Black" Text="TMB" FontSize="15" HorizontalOptions="FillAndExpand" BackgroundColor="White" VerticalOptions="Center" />
+                        </Grid>
+                    </Border>
+
+                </VerticalStackLayout>
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

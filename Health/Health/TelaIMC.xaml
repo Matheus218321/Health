@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Health.TelaIMC"
+             Title=" ">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label 
+            Text="Calculadora de IMC"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            FontSize="40"
+            Margin="0, 15, 0, 40"/>
+
+            <VerticalStackLayout WidthRequest="300" HorizontalOptions="Center">
+                <Label Text="Altura (ex: 1,70)" />
+                <Entry TextChanged="OnNumericEntryTextChanged" Keyboard="Numeric" x:Name="Altura" Placeholder="Metros" HorizontalOptions="Center" WidthRequest="300" Margin="0, 0, 0, 20"/>
+
+                <Label Text="Peso (ex: 70,00)" />
+                <Entry TextChanged="OnNumericEntryTextChanged" Keyboard="Numeric" x:Name="Peso" Placeholder="Quilos" HorizontalOptions="Center" WidthRequest="300" Margin="0, 0, 0, 40"/>
+
+                <Button Clicked="Calcular" FontSize="20" BackgroundColor="Red" TextColor="White" Text="Calcular" Margin="0, 0, 0, 50"/>
+
+                <Border Stroke="LightGray" Padding="10">
+                    <Label HorizontalOptions="Center" x:Name="Resultado" FontSize="30" Text="" />
+                </Border>
+
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

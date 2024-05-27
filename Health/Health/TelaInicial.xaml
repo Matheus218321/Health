@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Health.TelaInicial"
+             Title=" ">
+    <VerticalStackLayout>
+        <Label 
+            Text="Health"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            FontSize="40"
+            TextColor="Red" Margin="0, 0, 0, 30"/>
+
+        <VerticalStackLayout HorizontalOptions="Center">
+            <Label LineHeight="1.2" FontSize="20" Text="O Health é um aplicativo fitness para pessoas que desejam monitorar sua saúde!" />
+        </VerticalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Health.TelaTMB"
+             Title=" ">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label 
+            Text="Taxa Metabólica Basal (TMB)"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            FontSize="25"
+            Margin="0, 15, 0, 40"/>
+
+            <VerticalStackLayout WidthRequest="300" HorizontalOptions="Center">
+
+                <Label Text="Altura (ex: 1,74)" />
+                <Entry Keyboard="Numeric" TextChanged="OnNumericEntryTextChanged" x:Name="Altura" Placeholder="Metros" HorizontalOptions="Center" WidthRequest="300" Margin="0, 0, 0, 20"/>
+
+                <Label Text="Idade" />
+                <Entry Keyboard="Numeric" TextChanged="OnNumericEntryTextChanged" x:Name="Idade" Placeholder="Metros" HorizontalOptions="Center" WidthRequest="300" Margin="0, 0, 0, 20"/>
+
+                <Label Text="Peso (ex: 70,00)" />
+                <Entry Keyboard="Numeric" TextChanged="OnNumericEntryTextChanged" x:Name="Peso" Placeholder="Quilos" HorizontalOptions="Center" WidthRequest="300" Margin="0, 0, 0, 20"/>
+
+                <Picker WidthRequest="300" x:Name="Genero" BackgroundColor="White" Title="Gênero" Margin="0, 0, 0, 40">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Masculino</x:String>
+                            <x:String>Feminino</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <Button Clicked="Calcular" FontSize="20" BackgroundColor="Red" TextColor="White" Text="Calcular" Margin="0, 0, 0, 50"/>
+
+                <Border Stroke="LightGray" Padding="10">
+                    <Label HorizontalOptions="Center" x:Name="Resultado" FontSize="30" Text="" />
+                </Border>
+
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
