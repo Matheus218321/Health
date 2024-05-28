@@ -6,20 +6,22 @@
     <ScrollView>
         <VerticalStackLayout>
             <Label 
-            Text="Calculadora de IMC"
+            Text="Índice de Massa Corporal (IMC)"
             VerticalOptions="Center" 
             HorizontalOptions="Center" 
             FontSize="40"
             Margin="0, 15, 0, 40"/>
 
             <VerticalStackLayout WidthRequest="300" HorizontalOptions="Center">
-                <Label Text="Altura (ex: 1,70)" />
-                <Entry TextChanged="OnNumericEntryTextChanged" Keyboard="Numeric" x:Name="Altura" Placeholder="Metros" HorizontalOptions="Center" WidthRequest="300" Margin="0, 0, 0, 20"/>
+                <Label Text="Altura (ex: 170cm)" />
+                <Entry TextChanged="OnNumericEntryTextChanged" Keyboard="Numeric" x:Name="Altura" Placeholder="Centímetros" HorizontalOptions="Center" WidthRequest="300" Margin="0, 0, 0, 20"/>
 
-                <Label Text="Peso (ex: 70,00)" />
+                <Label Text="Peso (ex: 70,00kg)" />
                 <Entry TextChanged="OnNumericEntryTextChanged" Keyboard="Numeric" x:Name="Peso" Placeholder="Quilos" HorizontalOptions="Center" WidthRequest="300" Margin="0, 0, 0, 40"/>
 
-                <Button Clicked="Calcular" FontSize="20" BackgroundColor="Red" TextColor="White" Text="Calcular" Margin="0, 0, 0, 50"/>
+                <Button Clicked="Calcular" FontSize="20" BackgroundColor="Red" TextColor="White" Text="Calcular" Margin="0, 0, 0, 30"/>
+
+                <Label FontSize="25" HorizontalOptions="Center" x:Name="Categoria" Margin="0, 0, 0, 40"/>
 
                 <Border Stroke="LightGray" Padding="10">
                     <Label HorizontalOptions="Center" x:Name="Resultado" FontSize="30" Text="" />

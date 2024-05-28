@@ -14,13 +14,13 @@
 
             <VerticalStackLayout WidthRequest="300" HorizontalOptions="Center">
 
-                <Label Text="Altura (ex: 1,74)" />
+                <Label Text="Altura (ex: 174cm)" />
                 <Entry Keyboard="Numeric" TextChanged="OnNumericEntryTextChanged" x:Name="Altura" Placeholder="Metros" HorizontalOptions="Center" WidthRequest="300" Margin="0, 0, 0, 20"/>
 
                 <Label Text="Idade" />
                 <Entry Keyboard="Numeric" TextChanged="OnNumericEntryTextChanged" x:Name="Idade" Placeholder="Metros" HorizontalOptions="Center" WidthRequest="300" Margin="0, 0, 0, 20"/>
 
-                <Label Text="Peso (ex: 70,00)" />
+                <Label Text="Peso (ex: 70,00kg)" />
                 <Entry Keyboard="Numeric" TextChanged="OnNumericEntryTextChanged" x:Name="Peso" Placeholder="Quilos" HorizontalOptions="Center" WidthRequest="300" Margin="0, 0, 0, 20"/>
 
                 <Picker WidthRequest="300" x:Name="Genero" BackgroundColor="White" Title="Gênero" Margin="0, 0, 0, 40">

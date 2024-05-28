@@ -17,17 +17,8 @@ public partial class TelaTMB : ContentPage
         {
             string newText = e.NewTextValue;
 
-            // Remove caracteres inválidos usando expressão regular
-            string filteredText = Regex.Replace(newText, @"[^0-9\.,]", "");
-
-            // Verifique se há múltiplas ocorrências de vírgula ou ponto decimal
-            int commaCount = filteredText.Count(c => c == ',');
-            int periodCount = filteredText.Count(c => c == '.');
-            if (commaCount > 1 || periodCount > 1)
-            {
-                // Se houver múltiplas ocorrências, mantenha apenas a primeira
-                filteredText = filteredText.Replace(",", "").Replace(".", "");
-            }
+            // Remove caracteres não numéricos usando expressão regular
+            string filteredText = Regex.Replace(newText, @"\D", "");
 
             // Se o texto filtrado for diferente do novo texto, atualize o texto do Entry
             if (newText != filteredText)
@@ -36,8 +27,6 @@ public partial class TelaTMB : ContentPage
             }
         }
     }
-
-
 
     private void Calcular(object sender, EventArgs e)
     {
